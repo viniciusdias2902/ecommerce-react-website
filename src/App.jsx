@@ -8,14 +8,16 @@ import Home from './pages/Home'
 import Auth from './pages/Auth'
 import Checkout from './pages/Checkout'
 import AuthProvider from './context/AuthContext'
+import ProductDetails from './pages/ProductDetails'
 function App() {
   return <div className='app'>
-    <Navbar />
     <AuthProvider>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/auth' element={<Auth />}></Route>
         <Route path='/checkout' element={<Checkout />}></Route>
+        <Route path='/products/:id' element={<ProductDetails />}></Route>
       </Routes>
     </AuthProvider>
   </div >
